@@ -20,7 +20,7 @@ AFRAME.registerComponent("fish", {
 		fishEl.setAttribute("position", pos);
         fishEl.setAttribute("static-body", { shape: "sphere", sphereRadius: 2 });
 		fishEl.setAttribute("geometry", { primitive: "sphere", radius: 2 });
-        
+        fishEl.setAttribute("material", {color: "red"})
         el.appendChild(fishEl);
 	},
 });
