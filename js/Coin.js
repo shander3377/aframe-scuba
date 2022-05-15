@@ -14,14 +14,15 @@ AFRAME.registerComponent("coin", {
 	},
 
     makecoin: function (id, pos) {
-        console.log("yes")
 		var el = document.querySelector("#coins");
 		var coinEl = document.createElement("a-entity");
 		coinEl.setAttribute("id", id);
 		coinEl.setAttribute("position", pos);
 		coinEl.setAttribute("static-body", { shape: "sphere", sphereRadius: 2 });
 		coinEl.setAttribute("material", "color", "#ff9100");
-		coinEl.setAttribute("geometry", { primitive: "circle", radius: 1 });
+        coinEl.setAttribute("geometry", { primitive: "circle", radius: 1 });
+        coinEl.setAttribute("game-play", {id: id})
+        
 		coinEl.setAttribute("animation", {
 			property: "rotation",
 			to: "0 360 0",
@@ -29,6 +30,5 @@ AFRAME.registerComponent("coin", {
 			dur: 1000,
 		});
 		el.appendChild(coinEl);
-		console.log(el);
 	},
 });
