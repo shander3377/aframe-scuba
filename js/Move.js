@@ -35,7 +35,7 @@ AFRAME.registerComponent("move", {
 			if (e.key === "ArrowRight") {
 				this.data.beingPressed = true;
 
-				if (pos.x < 30) {
+				if (pos.x < 100) {
 					pos.x += 0.05;
 				}
 				if (rot.z > -14.5) {
@@ -48,7 +48,7 @@ AFRAME.registerComponent("move", {
 			if (e.key === "ArrowLeft") {
 				this.data.beingPressed = true;
 
-				if (pos.x > -30) {
+				if (pos.x > -50) {
 					pos.x -= 0.05;
 				}
 				if (rot.z < 14.5) {

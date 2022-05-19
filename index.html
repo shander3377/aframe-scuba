@@ -83,6 +83,63 @@
 			></a-cylinder>
 			<!--camera-->
 			<a-entity camera position="2.5 30 50.4" look-controls></a-entity>
+			
+				<!-----------------------------------Game Timer and Score------------------------------------------>
+				<a-entity id="header" position="3.5 24 30.4">
+					<!-- Title -->
+					<a-entity
+						position="-28.5 21.5 0"
+						text="font: exo2bold; align: center; width: 40; color: black; value: SCUBA DIVING VR"
+					></a-entity>
+	
+					<!-- Timer -->
+					<a-entity position="-23.5 19.3 0">
+						<a-entity
+							position="-1.5 0.07 0"
+							text="font: aileronsemibold; width: 12; color: black; value: TIME\nREMAINING"
+						></a-entity>
+						<a-entity
+							id="timer"
+							position="-9.8 0.3 0"
+							text="font: exo2bold; align: center; width: 30; color: black; value: 00:00"
+						></a-entity>
+					</a-entity>
+	
+					<!--GAMEOVER-->
+					<a-entity
+						position="0 7.5 0"
+						text="font: exo2bold; align: center; width: 40; color: black; value: GAME OVER"
+						visible="false"
+						id="gameover"
+					></a-entity>
+	
+					<!-- Target -->
+					<a-entity position="-18.5 19.3 0">
+						<a-entity
+							position="-0.6 0.13 0"
+							text="font: aileronsemibold; width: 12; color: black; value: Target\nRemaining"
+						></a-entity>
+						<a-entity
+							id="target"
+							position="-8 0.3 0"
+							text="font: exo2bold; align: center; width: 30; color: black; value: 10"
+						></a-entity>
+					</a-entity>
+	
+					<!-- Score -->
+					<a-entity position="30.5 23.5 0">
+						<a-entity
+							position="15 -2 0"
+							text="font: exo2bold; width: 42; color: black; value: Score"
+						></a-entity>
+						<a-entity
+							id="score"
+							position="1 -2.2 0"
+							text="font: exo2bold; align: center; width: 40; color: black; value: 0"
+						></a-entity>
+					</a-entity>
+				</a-entity>
+
 		</a-scene>
 	</body>
 </html>
